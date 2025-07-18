@@ -8,8 +8,8 @@ import io.github.notenoughupdates.moulconfig.annotations.SearchTag
 class HuntingFilterConfig {
 
     @Expose
-    @ConfigOption(name = "Charm", desc = "Hides charm messages from killing mobs")
-    @SearchTag("salt shard")
+    @ConfigOption(name = "Charm", desc = "Hides charm & salt messages from killing mobs")
+    @SearchTag("shard")
     @ConfigEditorBoolean
     var charm: Boolean = false
 
@@ -18,11 +18,6 @@ class HuntingFilterConfig {
     @SearchTag("panda mochibear invisibug joydive cod")
     @ConfigEditorBoolean
     var redundantComments: Boolean = false
-
-    @Expose
-    @ConfigOption(name = "Salt", desc = "Hides salt messages from killing mobs")
-    @SearchTag("charm shard")
-    var salt: Boolean = false
 
     @Expose
     @ConfigOption(name = "Swoop Huntaxe", desc = "Hide Swoop's message about monsters only taking damage from axes.")
