@@ -8,11 +8,6 @@ import io.github.notenoughupdates.moulconfig.annotations.ConfigOption
 class AnnoyingSpamFilterConfig {
 
     @Expose
-    @ConfigOption(name = "Anniversary Video", desc = "Hides messages about the anniversary video.")
-    @ConfigEditorBoolean
-    var youtube: Boolean = false
-
-    @Expose
     @ConfigOption(name = "Bait Catches", desc = "Hides annoying bait catch messages.")
     @ConfigEditorBoolean
     var bait: Boolean = false
