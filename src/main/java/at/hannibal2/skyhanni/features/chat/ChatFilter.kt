@@ -211,11 +211,8 @@ object ChatFilter {
     )
 
     private val charmMessageStartsWith = listOf(
-        "§5§lCHARM§7 You charmed a"
-    )
-
-    private val saltMessageStartsWith = listOf(
-        "§d§lCHARM§7 You charmed a"
+        "§5§lCHARM§7 You charmed a",
+        "§d§lCHARM§7 You charmed a",
     )
 
     // Hypixel Messages Category
@@ -623,7 +620,6 @@ object ChatFilter {
         "profile_join" to profileJoinMessageStartsWith,
         "slayer_ring" to slayerRingMessage,
         "charm" to charmMessageStartsWith,
-        "charm" to saltMessageStartsWith,
     )
 
     private val patternsMap: Map<String, List<Pattern>> = mapOf(
