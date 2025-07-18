@@ -656,7 +656,7 @@ object ChatFilter {
         "profile_join" to profileJoinMessageStartsWith,
         "slayer_ring" to slayerRingMessage,
         "charm" to charmMessageStartsWith,
-        "salt" to saltMessageStartsWith,
+        "charm" to saltMessageStartsWith,
     )
 
     private val patternsMap: Map<String, List<Pattern>> = mapOf(
@@ -755,7 +755,6 @@ object ChatFilter {
         huntingConfig.redundantComments && IslandType.GALATEA.isCurrent() && message.isPresent("redundant_hunting") -> "redundant_hunting"
         huntingConfig.swoopAxeMessage && message.isPresent("swoop_axe") -> "swoop_axe"
         huntingConfig.charm && message.isPresent("charm") -> "charm"
-        huntingConfig.salt && message.isPresent("salt") -> "salt"
         // HypixelMessages
         hypixelMessagesConfig.hypixelHub && message.isPresent("lobby") -> "lobby"
         hypixelMessagesConfig.warping && message.isPresent("warping") -> "warping"
