@@ -205,8 +205,6 @@ object ChatFilter {
         "(?:§.)*Mochibear ate too much and passed out! You caught it!",
         "(?:§.)*The Frog is exhausted\\.\\.\\.",
         "(?:§.)*You caught yourself an invisibug! The shard was sent to your Hunting Box!",
-        "(?:§.)*Joydive fainted!",
-        "(?:§.)*The Cod started Spinning!",
     )
 
     /**
