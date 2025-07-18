@@ -52,10 +52,4 @@ class TransactionConfig {
     @ConfigOption(name = "Bazaar Submitting Orders", desc = "Hide buy/sell \"Submitting...c\" order messages.")
     @ConfigEditorBoolean
     var bazaarOrder: Boolean = false
-
-    // Change name eventually probably... I didn't know what to name this one considering its so similar to Bazaar Orders.
-    @Expose
-    @ConfigOption(name = "Bazaar STFU", desc = "Completely hides buy order, sell offer and refund messages")
-    @ConfigEditorBoolean
-    var bazaarPatterns: Boolean = false
 }
