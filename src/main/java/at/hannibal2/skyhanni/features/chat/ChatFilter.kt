@@ -94,11 +94,6 @@ object ChatFilter {
         "Unknown command. Type \"/help\" for help. ('uhfdsolguhkjdjfhgkjhdfdlgkjhldkjhlkjhsldkjfhldshkjf')",
     )
 
-    @Suppress("MaxLineLength")
-    private val youtubeVideoPattern = listOf(
-        "§9§n\n§c§lYouTube Premier §eCelebrate Hypixel's 12th Anniversary with a special Minecraft Animation, live now §bhttps://youtu.be/ikT631vQd8A\n".toPattern(),
-    )
-
     // Combat Category
     private val implosionMessages = listOf(
         "§7Your Implosion hit (.*) for §r§c(.*) §r§7damage.".toPattern(),
@@ -689,7 +684,6 @@ object ChatFilter {
         "warping" to warpingPatterns,
         "winter_gift" to winterGiftPatterns,
         "winter_island" to winterIslandPatterns,
-        "youtube_video" to youtubeVideoPattern,
     )
 
     private val repoPatternsMap: Map<String, List<Pattern>> = mapOf(
@@ -725,7 +719,6 @@ object ChatFilter {
         annoyingSpamFilterConfig.cookie && message.isPresent("cookie") -> "cookie"
         annoyingSpamFilterConfig.sacrifice && message.isPresent("sacrifice") -> "sacrifice"
         annoyingSpamFilterConfig.sbe && message.isPresent("sbe") -> "sbe"
-        annoyingSpamFilterConfig.youtube && message.isPresent("youtube_video") -> "youtube_video"
         // Combat
         combatFilterConfig.killCombo && message.isPresent("kill_combo") -> "kill_combo"
         combatFilterConfig.implosion && message.isPresent("implosion") -> "implosion"
