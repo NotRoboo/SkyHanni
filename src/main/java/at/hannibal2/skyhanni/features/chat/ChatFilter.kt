@@ -486,32 +486,6 @@ object ChatFilter {
         "§6[Bazaar] §r§7Submitting sell offer...",
     )
 
-    /**
-     * REGEX-TEST: §6[Bazaar] §r§7§r§eBuy Order Setup! §r§a64§r§7x §r§9Extremely Real Shuriken §r§7for §r§63,200 coins§r§7.
-     * REGEX-TEST: §6[Bazaar] §r§7§r§cCancelled! §r§7Refunded §r§63,200 coins §r§7from cancelling Buy Order!
-     * REGEX-TEST: §6[Bazaar] §r§7§r§eSell Offer Setup! §r§a4§r§7x §r§fBirch Log §r§7for §r§67.9 coins§r§7.
-     * REGEX-TEST: §6[Bazaar] §r§7§r§cCancelled! §r§7Refunded §r§a4§r§7x §r§fBirch Log §r§7from cancelling Sell Offer!
-     * REGEX-TEST: §6[Bazaar] §r§7Bought §r§a16§r§7x §r§fEnder Pearl §r§7for §r§6158.4 coins§r§7!
-     * REGEX-TEST: §6[Bazaar] §r§7Sold §r§a16§r§7x §r§fEnder Pearl §r§7for §r§6118.4 coins§r§7!
-     */
-
-    private val bazaarPatterns = listOf(
-        // Buy Order Setup
-        "§6\\[Bazaar\\] §r§7§r§eBuy Order Setup! §r§a(\\d+)§r§7x §r§[0-9a-f](.*) §r§7for §r§6([\\d,.]+) coins§r§7".toPattern(),
-        // Cancelled Buy Order
-        "§6\\[Bazaar\\] §cCancelled! §r§7Refunded §r§6([\\d,.]+) coins §r§7from cancelling Buy Order!".toPattern(),
-        // Sell Offer Setup
-        "§6\\[Bazaar\\] §eSell Offer Setup! §r§a(\\d+)§r§7x §r§[0-9a-f](.*) §r§7for §r§6([\\d,.]+) coins§r§7".toPattern(),
-        // Cancelled Sell Offer
-        "§6\\[Bazaar\\] §cCancelled! §r§7Refunded §r§a(\\d+)§r§7x §r§[0-9a-f](.*) §r§7from cancelling Sell Offer!".toPattern(),
-        // Buy Order Filled
-        "§6\\[Bazaar\\] §eYour §aBuy Order §efor §a(\\d+)§r§7x §f(.*) §ewas filled!§r§7".toPattern(),
-        // Bought
-        "§6\\[Bazaar\\] §r§7Bought §r§a(\\d+)§r§7x §r§[0-9a-f](.*) §r§7for §r§6([\\d,.]+) coins§r§7!".toPattern(),
-        // Sold
-        "§6\\[Bazaar\\] §r§7Sold §r§a(\\d+)§r§7x §r§[0-9a-f](.*) §r§7for §r§6([\\d,.]+) coins§r§7!".toPattern()
-    )
-
     private val uselessAHMessages = listOf(
         "§7Claiming BIN auction...",
         "§7Processing bid...",
@@ -654,7 +628,6 @@ object ChatFilter {
 
     private val patternsMap: Map<String, List<Pattern>> = mapOf(
         "achievement_get" to achievementGetPatterns,
-        "bazaar_stfu" to bazaarPatterns,
         "breaking_power" to breakingPowerPattern,
         "drop_combat" to uselessDropCombatPatterns,
         "drop_dungeons" to uselessDropDungeonsPatterns,
@@ -780,7 +753,6 @@ object ChatFilter {
         transactionConfig.bazaarEscrow && message.isPresent("bazaar_escrow") -> "bazaar_escrow"
         transactionConfig.bazaarOrder && message.isPresent("bazaar_order") -> "bazaar_order"
         transactionConfig.bazaarInstant && message.isPresent("bazaar_instant") -> "bazaar_instant"
-        transactionConfig.bazaarPatterns && message.isPresent("bazaar_stfu") -> "bazaar_stfu"
         transactionConfig.bazaarCancel && message.isPresent("bazaar_cancel") -> "bazaar_cancel"
         transactionConfig.bazaarClaim && message.isPresent("bazaar_claim") -> "bazaar_claim"
         transactionConfig.bankDepositWithdraw && message.isPresent("bank_transaction") -> "bank_transaction"
