@@ -49,5 +49,4 @@ class CombatFilterConfig {
     @ConfigEditorBoolean
     @FeatureToggle
     var spiritSceptre: Boolean = false
-
 }
