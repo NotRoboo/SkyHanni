@@ -551,8 +551,7 @@ object ChatFilter {
         "§aSince you've been away you earned §r§60 coins §r§aas interest in your personal bank account!",
         "§aYou have just received §r§60 coins §r§aas interest in your co-op bank account!",
         "§aYou have just received §r§60 coins §r§aas interest in your personal bank account!",
-
-        )
+    )
 
     private val powerOrbNotificationMessages = listOf(
         "\"§eYour previous §r§[0-9a-f](Plasmaflux Power Orb|Overflux Power Orb|Manaflux Power Orb) §r§ewas removed!\".toPattern()"
