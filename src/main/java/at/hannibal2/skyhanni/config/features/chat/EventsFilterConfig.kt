@@ -8,7 +8,7 @@ import io.github.notenoughupdates.moulconfig.annotations.ConfigOption
 class EventsFilterConfig {
 
     @Expose
-    @ConfigOption(name = "Cannon Mount", desc = "Hide messages when plpayers mount a cannon on Jerry\'s workshop")
+    @ConfigOption(name = "Cannon Mount", desc = "Hide messages when players mount a cannon on Jerry's workshop")
     @ConfigEditorBoolean
     var cannon: Boolean = false
 

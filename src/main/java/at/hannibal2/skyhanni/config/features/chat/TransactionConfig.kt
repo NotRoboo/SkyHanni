@@ -14,42 +14,42 @@ class TransactionConfig {
     var uselessAH: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Allowance", desc = "Hides daily allowance messages.")
+    @ConfigOption(name = "Allowance", desc = "Hides 'ALLOWANCE! You earned #' messages.")
     @ConfigEditorBoolean
     var allowance: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Auction Claim", desc = "Hide message telling you to visit auction house to collect your item.")
+    @ConfigOption(name = "Auction Claim", desc = "Hide 'Visit the Auction House to collect your item!' messages.")
     @ConfigEditorBoolean
     var auctionHouseClaim: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Bank Messages", desc = "Hide bank deposit/withraw messages.")
+    @ConfigOption(name = "Bank Messages", desc = "Hide 'Depositing coins...' and 'Withdrawing coins...' messages.")
     @ConfigEditorBoolean
     var bankDepositWithdraw: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Bazaar Cancel", desc = "Hide \"Cancelling order...\" message.")
+    @ConfigOption(name = "Bazaar Cancel", desc = "Hide 'Cancelling order...' message.")
     @ConfigEditorBoolean
     var bazaarCancel: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Bazaar Claim", desc = "Hide \"Claiming order...\" messages.")
+    @ConfigOption(name = "Bazaar Claim", desc = "Hide 'Claiming order...' messages.")
     @ConfigEditorBoolean
     var bazaarClaim: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Bazaar Escrow", desc = "Hide \"Putting coins in escrow...\" messages")
+    @ConfigOption(name = "Bazaar Escrow", desc = "Hide 'Putting coins in escrow...' messages")
     @ConfigEditorBoolean
     var bazaarEscrow: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Bazaar Instant", desc = "Hide \"Executing instant buy/sell...\" messages.")
+    @ConfigOption(name = "Bazaar Instant", desc = "Hide 'Executing instant buy/sell...' messages.")
     @ConfigEditorBoolean
     var bazaarInstant: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Bazaar Submitting Orders", desc = "Hide buy/sell \"Submitting...c\" order messages.")
+    @ConfigOption(name = "Bazaar Submitting Orders", desc = "Hide buy/sell 'Submitting...c' order messages.")
     @ConfigEditorBoolean
     var bazaarOrder: Boolean = false
 }

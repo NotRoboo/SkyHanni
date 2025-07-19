@@ -10,38 +10,33 @@ class SlayerFilterConfig {
 
     @Expose
     @ConfigOption(name = "Slayer Complete", desc = "Hide 'SLAYER QUEST COMPLETE!' messages.")
-    @SearchTag("")
     @ConfigEditorBoolean
     var slayerComplete: Boolean = false
 
     @Expose
     @ConfigOption(name = "Slayer Killed", desc = "Hide 'SLAYER BOSS SLAIN!' and miniboss kill credit messages.")
-    @SearchTag("")
     @ConfigEditorBoolean
     var slayerKilled: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Slayer Level", desc = "Hide 'Slayer LVL MAXED OUT!' messages.")
-    @SearchTag("")
+    @ConfigOption(name = "Slayer Level", desc = "Hide 'Slayer LVL' messages.")
     @ConfigEditorBoolean
     var slayerLevel: Boolean = false
 
     @Expose
     @ConfigOption(name = "Slayer Maddox", desc = "Hide 'Talk to Maddox to claim your Slayer XP!' messages.")
-    @SearchTag("")
     @ConfigEditorBoolean
     var slayerMaddox: Boolean = false
 
     // TODO move this somewhere else as it is all RING... not just slayer
     @Expose
     @ConfigOption(name = "Slayer Ring", desc = "Hide 'RING...' messages for Slayer quests.")
-    @SearchTag("")
+    @SearchTag("abiphone")
     @ConfigEditorBoolean
     var slayerRing: Boolean = false
 
     @Expose
     @ConfigOption(name = "Slayer Start", desc = "Hide 'SLAYER QUEST STARTED!' messages.")
-    @SearchTag("")
     @ConfigEditorBoolean
     var slayerStart: Boolean = false
 

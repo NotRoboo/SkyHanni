@@ -38,7 +38,7 @@ class CombatFilterConfig {
     var killCombo: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Midas Staff", desc = "Hide molten wave ability messages.")
+    @ConfigOption(name = "Midas Staff", desc = "Hide the Midas Staff molten wave ability messages.")
     @ConfigEditorBoolean
     @FeatureToggle
     var moltenWave: Boolean = false

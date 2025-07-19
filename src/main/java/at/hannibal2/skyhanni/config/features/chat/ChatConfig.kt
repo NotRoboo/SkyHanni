@@ -65,7 +65,7 @@ class ChatConfig {
     val filterType: FilterTypesConfig = FilterTypesConfig()
 
     // TODO jawbus + thunder <- Someone else's todo
-    @Category(name = "Compact Chat", desc = "Configure Compacted Messages.")
+    @Category(name = "Compact Chat", desc = "Configure compacted messages.")
     @Expose
     val compact: CompactConfig = CompactConfig()
 

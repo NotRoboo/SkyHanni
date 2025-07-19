@@ -52,8 +52,8 @@ object ChatFilter {
     private val miscPatternGroup = chatFilterGroup.group("hypixel-misc")
 
     // <editor-fold desc="Regex Patterns & Messages">
-    // Annoying Spam Category
 
+    // Annoying Spam Category
     private val baitMessages = listOf(
         "§6§lGOOD CATCH! §r§bYou found a §r§aBlessed Bait§r§b.",
         "§6§lGOOD CATCH! §r§bYou found a §r§aGrand Experience Bottle§r§b.",
@@ -517,8 +517,8 @@ object ChatFilter {
         "§aYou have just received §r§60 coins §r§aas interest in your personal bank account!",
     )
 
-    private val powerOrbNotificationMessages = listOf(
-        "\"§eYour previous §r§[0-9a-f](Plasmaflux Power Orb|Overflux Power Orb|Manaflux Power Orb) §r§ewas removed!\".toPattern()"
+    private val powerOrbNotificationPattern = listOf(
+        "§eYour previous §r§[0-9a-f](Plasmaflux Power Orb|Overflux Power Orb|Manaflux Power Orb) §r§ewas removed!".toPattern()
     )
 
     private val miningSpeedBoostNotificationMessages = listOf(
@@ -528,8 +528,8 @@ object ChatFilter {
     )
 
     // Useless Warnings Category
-    private val abilityCooldownWarning = listOf(
-        "§cThis ability is on cooldown for (.*)s."
+    private val abilityCooldownPattern = listOf(
+        "§cThis ability is on cooldown for (.*)s.".toPattern()
     )
 
     private val commandsFastWarning = listOf(
@@ -571,7 +571,6 @@ object ChatFilter {
     )
 
     private val messagesMap: Map<String, List<String>> = mapOf(
-        "ability_cooldown" to abilityCooldownWarning,
         "ah_claim" to auctionHouseClaim,
         "allowance" to allowanceMessages,
         "bank_transaction" to bankDepositWithdraw,
@@ -585,7 +584,7 @@ object ChatFilter {
         "commands_fast" to commandsFastWarning,
         "combat_warning" to combatWarning,
         "cookie" to cookieMessages,
-        "drop_combat" to uselessDropCombatMessages,
+        "drops_combat" to uselessDropCombatMessages,
         "event" to eventMessage,
         "fire_sale" to fireSaleMessages,
         "bait" to baitMessages,
@@ -596,7 +595,6 @@ object ChatFilter {
         "mining_boost" to miningSpeedBoostNotificationMessages,
         "modify_warning" to modifyWarning,
         "parkour" to parkourCancelMessages,
-        "power_orb" to powerOrbNotificationMessages,
         "party_line" to partyLineMessages,
         "powder_mining" to powderMiningMessages,
         "refresh_warning" to refreshingWarning,
@@ -623,10 +621,11 @@ object ChatFilter {
     )
 
     private val patternsMap: Map<String, List<Pattern>> = mapOf(
+        "ability_cooldown" to abilityCooldownPattern,
         "achievement_get" to achievementGetPatterns,
         "breaking_power" to breakingPowerPattern,
-        "drop_combat" to uselessDropCombatPatterns,
-        "drop_dungeons" to uselessDropDungeonsPatterns,
+        "drops_combat" to uselessDropCombatPatterns,
+        "drops_dungeons" to uselessDropDungeonsPatterns,
         "event" to eventPatterns,
         "fairy" to fairyPatterns,
         "factory_upgrade" to factoryUpgradePatterns,
@@ -639,6 +638,7 @@ object ChatFilter {
         "lobby" to lobbyPatterns,
         "molten_wave" to moltenWaveMessages,
         "parkour" to parkourPatterns,
+        "power_orb" to powerOrbNotificationPattern,
         "rare_drops" to rareDropsMessages,
         "sacrifice" to sacrificePatterns,
         "slayer_complete" to slayerCompletePattern,

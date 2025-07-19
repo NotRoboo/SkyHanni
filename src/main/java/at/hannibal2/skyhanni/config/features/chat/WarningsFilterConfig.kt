@@ -14,37 +14,37 @@ class WarningsFilterConfig {
     var abilityCooldown: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Cannot Modify Equipped Pieces", desc = "Hides You can not modify your equipped armor set! messages.")
+    @ConfigOption(name = "Cannot Modify Equipped Pieces", desc = "Hides 'You can not modify your equipped armor set!' messages.")
     @ConfigEditorBoolean
     @FeatureToggle
     var modifyWarning: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Combat Warning", desc = "Hides You can't use this while in combat! messages.")
+    @ConfigOption(name = "Combat Warning", desc = "Hides 'You can't use this while in combat!' messages.")
     @ConfigEditorBoolean
     @FeatureToggle
     var combatWarning: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Confirm Cooldown", desc = "Removes the Wait a moment before confirming messages")
+    @ConfigOption(name = "Confirm Cooldown", desc = "Removes 'Wait a moment before confirming' messages")
     @ConfigEditorBoolean
     @FeatureToggle
     var waitWarning: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Fast Command Warning", desc = "Hides you are sending commands too fast! messages.")
+    @ConfigOption(name = "Fast Command Warning", desc = "Hides 'You are sending commands too fast!' messages.")
     @ConfigEditorBoolean
     @FeatureToggle
     var fastCommand: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Not Salvageable Warning", desc = "Hides This item is not salvageable! messages.")
+    @ConfigOption(name = "Not Salvageable Warning", desc = "Hides 'This item is not salvageable!' messages.")
     @ConfigEditorBoolean
     @FeatureToggle
     var salvageableWarning: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Refresh Wait Warning", desc = "Hides Please wait a few seconds between refreshing! messages.")
+    @ConfigOption(name = "Refresh Wait Warning", desc = "Hides 'Please wait a few seconds between refreshing!' messages.")
     @ConfigEditorBoolean
     @FeatureToggle
     var refreshWarning: Boolean = false
@@ -56,7 +56,7 @@ class WarningsFilterConfig {
     var salvageWarning: Boolean = false
 
     @Expose
-    @ConfigOption(name = "Slow Down Warning", desc = "Removes the Whoa! Slow down there! messages")
+    @ConfigOption(name = "Slow Down Warning", desc = "Removes 'Whoa! Slow down there!' messages")
     @ConfigEditorBoolean
     @FeatureToggle
     var slowWarning: Boolean = false
