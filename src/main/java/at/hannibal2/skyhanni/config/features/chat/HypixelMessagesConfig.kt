@@ -62,7 +62,7 @@ class HypixelMessagesConfig {
     @Expose
     @ConfigOption(
         name = "Parkour Messages",
-        desc = "Hide parkour messages (starting, stopping, reaching a checkpoint)."
+        desc = "Hide parkour messages (starting, stopping, reaching a checkpoint).",
     )
     @ConfigEditorBoolean
     @FeatureToggle
@@ -100,7 +100,7 @@ class HypixelMessagesConfig {
     @Expose
     @ConfigOption(
         name = "Watchdog",
-        desc = "Hide the message where Hypixel flexes about how many players they have banned over the last week."
+        desc = "Hide the message where Hypixel flexes about how many players they have banned over the last week.",
     )
     @ConfigEditorBoolean
     @FeatureToggle

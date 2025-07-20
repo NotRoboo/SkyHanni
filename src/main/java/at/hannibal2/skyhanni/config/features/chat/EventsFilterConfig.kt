@@ -15,7 +15,7 @@ class EventsFilterConfig {
     @Expose
     @ConfigOption(
         name = "Diana",
-        desc = "Hide chat messages around griffin burrow chains, griffin feather drops, and coin drops."
+        desc = "Hide chat messages around griffin burrow chains, griffin feather drops, and coin drops.",
     )
     @ConfigEditorBoolean
     @FeatureToggle
@@ -25,7 +25,7 @@ class EventsFilterConfig {
     @ConfigOption(
         name = "Factory Upgrade",
         desc = "Hide §nHypixel's§r Chocolate Factory upgrade and employee promotion messages.\n" +
-            "§eTo turn off SkyHanni's upgrade messages, search §lUpgrade Warning"
+            "§eTo turn off SkyHanni's upgrade messages, search §lUpgrade Warning",
     )
     @ConfigEditorBoolean
     @FeatureToggle
